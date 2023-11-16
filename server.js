@@ -1,11 +1,20 @@
-import express from "express"
-import db from "./db/db.js"
+import express from "express";
+import db from "./model/index.js";
+
 
 const app = express()
 
 app.use(express.json())
 
 app.use(express.urlencoded({ extend: true}))
+
+db.connection.sync({force: true})
+.then(() => {
+    console.log('Drop and re-sync db');
+})
+.catch((err) => {
+    console.log('Failed to sync db' + err.message);
+})
 
 app.get('/', (req, res) => {
     res.json({message: 'servidor rodando!'})
