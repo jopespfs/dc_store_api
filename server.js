@@ -1,5 +1,6 @@
 import express from "express";
 import db from "./model/index.js";
+import { routeProduto } from "./routes/produto.routes.js";
 
 
 const app = express()
@@ -19,6 +20,8 @@ db.connection.sync({force: true})
 app.get('/', (req, res) => {
     res.json({message: 'servidor rodando!'})
 })
+
+routeProduto(app)
 
 const HOST = 'localhost'
 const PORT = '5000'

@@ -1,8 +1,7 @@
 import { DataTypes } from "sequelize";
 
 export const produtoModel = connection => {
-  const produto = connection.define(
-    "produto",
+  const produto = connection.define('produto',
     {
       // Model attributes are defined here
       nome: {
