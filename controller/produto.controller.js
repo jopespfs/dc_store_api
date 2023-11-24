@@ -27,9 +27,29 @@ export const produtoController = {
         
     },
     findAll: (req, res) => {
+        Produto.findAll()
+        .then(data => {
+            res.send(data)
+        })
+        .catch(e => {
+            res.status(500).send({
+                message: e.message || 'Ocorreu um erro ao buscar todos os Produtos!'
+            })
+        })
         
     },
     findById: (req, res) => {
+        const id = req.params.id
+
+        Produto.findByPk(id)
+        .then(data => {
+            res.send(data)
+        })
+        .catch(e => {
+            res.status(500).send({
+                message: e.message || `Ocorreu um erro ao buscar produto de id: ${id}!`
+            })
+        })
         
     },
     findByStatus: (req, res) => {
