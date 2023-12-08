@@ -1,6 +1,7 @@
 import express from "express";
 import db from "./model/index.js";
 import { routeProduto } from "./routes/produto.routes.js";
+import 'dotenv/config'
 
 const app = express()
 
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
 
 routeProduto(app)
 
-const HOST = 'localhost'
+const HOST = process.env.HOST || 'localhost'
 const PORT = '5000'
 
 app.listen(PORT, () => {
