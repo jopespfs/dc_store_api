@@ -4,9 +4,9 @@ import 'dotenv/config'
 
 export const DB_CONFIG = {
     host: process.env.HOST,
-    port: process.env.PASS,
+    port: 5432,
     user: process.env.USER,
     pass: process.env.PASS,
-    db: process.env.DB, // dripstore
-    dialect: process.env.DIALECT,
+    db: 'dc', // dripstore
+    dialect: 'postgres',
 }
