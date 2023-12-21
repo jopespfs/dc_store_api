@@ -1,7 +1,6 @@
 import express from "express";
 import db from "./model/index.js";
 import { routeProduto } from "./routes/produto.routes.js";
-import 'dotenv/config'
 
 const app = express()
 

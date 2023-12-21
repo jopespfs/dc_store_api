@@ -1,12 +1,12 @@
 import 'dotenv/config'
 
-//console.log(process.env);
+//console.log(process.env.HOST);
 
 export const DB_CONFIG = {
-    host: process.env.HOST,
-    port: 5432,
-    user: process.env.USER,
-    pass: process.env.PASS,
-    db: 'dc', // dripstore
-    dialect: 'postgres',
+    HOST: process.env.HOST,
+    PORT: 5432,
+    USER: process.env.USER,
+    PASS: process.env.PASS,
+    DB: 'dc', // dripstore
+    DIALECT: 'postgres'
 }
