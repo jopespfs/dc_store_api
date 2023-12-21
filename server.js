@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
 
 routeProduto(app)
 
-const HOST = process.env.HOST || 'localhost'
-const PORT = '5000'
+const HOST = 'localhost'
+const PORT = 5000
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando em : http://${HOST}:${PORT}`);
