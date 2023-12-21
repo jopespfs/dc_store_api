@@ -21,7 +21,7 @@ export const connection = new Sequelize(
           require: true,
           rejectUnauthorized: false, // Configuração para evitar o erro "SSL/TLS required"
       },
-      keepAlive: true;
+      keepAlive: true,
   },
   ssl:true
   });
